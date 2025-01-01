@@ -1,0 +1,34 @@
+<div class="user-list-container">
+  <h2 class="title">Manage Users</h2>
+  <div *ngIf="isLoading" class="loading-spinner">Loading...</div>
+
+  <div *ngIf="!isLoading && users.length > 0">
+    <table class="styled-table">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Username</th>
+          <th>Email</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let user of users">
+          <td>{{ user.id }}</td>
+          <td>{{ user.username }}</td>
+          <td>{{ user.useremail }}</td>
+          <td class="btn-td">
+            <button class="btn btn-delete" (click)="deleteUser(user.id)">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div *ngIf="!isLoading && users.length === 0" class="no-data">
+    No users found.
+  </div>
+</div>
+
+
+<!-- <p>Welcome To User List Page </p> -->

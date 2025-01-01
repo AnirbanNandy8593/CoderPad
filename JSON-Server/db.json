@@ -4,9 +4,113 @@
       "id": "9440",
       "username": "Anirban_Nandy18",
       "userrole": "data-admin",
-      "useremail": "zxcvzcx@aksdfa.com",
-      "password": "123456",
-      "cnfpassword": "123456"
+      "useremail": "anirban@hotmail.com",
+      "password": "654321",
+      "cnfpassword": "654321",
+      "isActive": true
+    },
+    {
+      "id": "8765",
+      "username": "Anirudh_Nandy20",
+      "userrole": "candidate",
+      "useremail": "anirudh@hotmail.com",
+      "password": "654321",
+      "cnfpassword": "654321"
+    },
+    {
+      "id": "5432",
+      "username": "Tony_Stark50",
+      "userrole": "test-admin",
+      "useremail": "tony@hotmail.com",
+      "password": "654321",
+      "cnfpassword": "654321",
+      "isActive": true
+    }
+  ],
+  "tests": [
+    {
+      "id": "e274",
+      "createdBy": "9440",
+      "testName": "Java Test",
+      "testDescription": "Test On Basics Of Java",
+      "duration": 45,
+      "questions": [
+        {
+          "questionDescription": "What is 34+35 equal to?",
+          "quesType": "mcq",
+          "difficulty": "easy",
+          "option1": "69",
+          "option2": "43",
+          "option3": "46",
+          "option4": "68",
+          "correctAnswer": "69",
+          "id": "ce22"
+        }
+      ]
+    },
+    {
+      "id": "ae33",
+      "createdBy": "9440",
+      "testName": "DBMS Test",
+      "testDescription": "A basic sql based test for performing certain operations on MySQL database",
+      "duration": 30,
+      "questions": [
+        {
+          "id": "7a4d",
+          "questionDescription": "Write a query to get all the details from table Employees?",
+          "quesType": "sql",
+          "difficulty": "easy",
+          "option1": "null",
+          "option2": "null",
+          "option3": "null",
+          "option4": "null",
+          "correctAnswer": "select * from Employees;"
+        }
+      ]
+    },
+    {
+      "createdBy": "9440",
+      "testName": "Java Test",
+      "testDescription": "MCQ test on Collections in Java",
+      "duration": 45,
+      "id": "b121",
+      "questions": [
+        {
+          "questionDescription": "What is 34+35 equal to?",
+          "quesType": "mcq",
+          "difficulty": "easy",
+          "option1": "69",
+          "option2": "43",
+          "option3": "46",
+          "option4": "68",
+          "correctAnswer": "69",
+          "id": "ce22"
+        }
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "questionDescription": "What is 34+35 equal to?",
+      "quesType": "mcq",
+      "difficulty": "easy",
+      "option1": "69",
+      "option2": "43",
+      "option3": "46",
+      "option4": "68",
+      "correctAnswer": "69",
+      "id": "ce22"
+    },
+    {
+      "id": "7a4d",
+      "questionDescription": "Write a query to get all the details from table Employees?",
+      "quesType": "sql",
+      "difficulty": "easy",
+      "option1": "null",
+      "option2": "null",
+      "option3": "null",
+      "option4": "null",
+      "correctAnswer": "select * from Employees;"
     }
   ]
 }

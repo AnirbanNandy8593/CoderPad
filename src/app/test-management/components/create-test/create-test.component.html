@@ -1,0 +1,24 @@
+<div class="create-test-container">
+  <h1>Create Test</h1>
+  <form [formGroup]="testForm" (ngSubmit)="saveTest()">
+    <div class="form-group">
+      <label for="createdBy">Created By (Admin ID)</label>
+      <input id="createdBy" type="text" formControlName="createdBy" placeholder="Enter Admin ID" />
+    </div>
+    <div class="form-group">
+      <label for="testName">Test Name</label>
+      <input id="testName" type="text" formControlName="testName" placeholder="Enter Test Name" />
+    </div>
+    <div class="form-group">
+      <label for="testDescription">Test Description</label>
+      <textarea id="testDescription" formControlName="testDescription" placeholder="Enter Test Description"></textarea>
+    </div>
+    <div class="form-group">
+      <label for="duration">Duration (in minutes)</label>
+      <input id="duration" type="number" formControlName="duration" placeholder="Enter Duration" />
+    </div>
+    <button type="submit" class="save-button" [disabled]="testForm.invalid">Save Test</button>
+  </form>
+</div>
+
+<!-- <p>Welcome To Create Test</p> -->
