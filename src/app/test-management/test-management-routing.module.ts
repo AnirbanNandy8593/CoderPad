@@ -15,9 +15,9 @@ const routes: Routes = [
   // {
   //   path:'',redirectTo:'create-test',pathMatch:'full'
   // }
-  // {
-  //   path: 'update-test/:id', component: UpdateTestComponent ,
-  // },
+  {
+    path: 'update-test/:id', component: UpdateTestComponent ,
+  },
   // {
   //   path:'',redirectTo:'update-test',pathMatch:'full'
   // }
@@ -30,10 +30,10 @@ const routes: Routes = [
   // {
   //   path:'question-list', component:QuestionListComponent
   // },
-  // {
-  //   path: 'update-question/:id',
-  //   component: UpdateQuestionComponent,
-  // },
+  {
+    path: 'update-question/:id',
+    component: UpdateQuestionComponent,
+  },
   // {
   //   path:'',redirectTo:'question-list',pathMatch:'full'
   // }

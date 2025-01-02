@@ -25,7 +25,8 @@
         <td>{{ question.difficulty }}</td>
         <td>{{ question.correctAnswer }}</td>
         <td>
-          <button (click)="deleteQuestionFromTest(question.id)">Delete</button>
+          <button (click)="deleteQuestionFromTest(question.id)" class="delete-button">Delete</button>
+          <button (click)="navigateToUpdateQuestion(question.id)" class="update-button">Update</button>
         </td>
       </tr>
     </tbody>

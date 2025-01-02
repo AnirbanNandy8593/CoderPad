@@ -60,8 +60,9 @@
         }
       }
     }
-    button {
+    .delete-button {
       padding: 5px 10px;
+      margin-right: 10px;
       background-color: #e74c3c;
       color: white;
       border: none;
@@ -69,7 +70,23 @@
       border-radius: 4px;
 
       &:hover {
-        background-color: #c0392b;
+        background-color: lightcoral;
+        transform: scale(1.1);
+      }
+    }
+
+    .update-button {
+      padding: 5px 10px;
+      margin-top: 5px;
+      background-color: green;
+      color: white;
+      border: none;
+      cursor: pointer;
+      border-radius: 4px;
+
+      &:hover {
+        background-color: lightgreen;
+        transform: scale(1.1);
       }
     }
   }

@@ -40,6 +40,11 @@ export class TestQuestionsComponent {
     this.router.navigate(['/question-list', this.testId]);
   }
 
+  navigateToUpdateQuestion(id: string): void {
+    this.router.navigate(['/update-question', id]);
+  }
+
+
   deleteQuestionFromTest(questionId: string): void {
     this.testService.getTestById(this.testId).subscribe((test) => {
       if (test.questions) {

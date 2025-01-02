@@ -31,10 +31,6 @@ export class QuestionListComponent {
     });
   }
 
-  navigateToUpdateQuestion(id: string): void {
-    this.router.navigate(['/update-question', id]);
-  }
-
   addToTest(question: any): void {
     this.questionService.addQuestionToTest(this.selectedTestId, question).subscribe({
       next: () => {
