@@ -68,23 +68,26 @@
       }
     }
   }
+  .submit-button-style{
+    display: flex;
+    justify-content: center;
+    .submit-button {
+      display: block;
+      width: 15%;
+      padding: 10px 20px;
+      font-size: 1rem;
+      font-weight: bold;
+      color: hsl(0, 0%, 100%);
+      background-color: #007bff;
+      border: none;
+      border-radius: 5px;
+      text-align: center;
+      cursor: pointer;
+      transition: background 0.3s;
 
-  .submit-button {
-    display: block;
-    width: 15%;
-    padding: 10px 20px;
-    font-size: 1rem;
-    font-weight: bold;
-    color: hsl(0, 0%, 100%);
-    background-color: #007bff;
-    border: none;
-    border-radius: 5px;
-    text-align: center;
-    cursor: pointer;
-    transition: background 0.3s;
-
-    &:hover {
-      background-color: #0056b3;
+      &:hover {
+        background-color: #0056b3;
+      }
     }
   }
 }
