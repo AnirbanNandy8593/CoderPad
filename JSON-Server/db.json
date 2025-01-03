@@ -112,5 +112,31 @@
       "option4": "null",
       "correctAnswer": "select * from Employees;"
     }
+  ],
+  "attempted": [
+    {
+      "id": "78be",
+      "candidateId": "8765",
+      "testId": "e274",
+      "questions": [
+        {
+          "questionId": "ce22",
+          "selectedAnswer": "69",
+          "correctAnswer": "69"
+        }
+      ]
+    },
+    {
+      "id": "03d9",
+      "candidateId": "8765",
+      "testId": "ae33",
+      "questions": [
+        {
+          "questionId": "7a4d",
+          "selectedAnswer": "Select * from Table;",
+          "correctAnswer": "select * from Employees;"
+        }
+      ]
+    }
   ]
 }

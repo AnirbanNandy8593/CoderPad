@@ -11,12 +11,12 @@ const routes: Routes = [
   // { path: 'login', component: LoginComponent },
   // { path: 'signup', component: SignupComponent },
   // { path: '', redirectTo: 'login', pathMatch: 'full' },
-  // { path:'profile',component:ProfileComponent },
+  { path:'profile',component:ProfileComponent },
+  // {
+  //   path:'admin-approval',component:AdminApprovalComponent
+  // },
   {
-    path:'admin-approval',component:AdminApprovalComponent
-  },
-  {
-    path:'',redirectTo:'admin-approval',pathMatch:'full'
+    path:'',redirectTo:'profile',pathMatch:'full'
   }
 ];
 

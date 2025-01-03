@@ -9,6 +9,8 @@ import { CreateQuestionComponent } from './components/create-question/create-que
 import { UpdateQuestionComponent } from './components/update-question/update-question.component';
 import { QuestionListComponent } from './components/question-list/question-list.component';
 import { TestQuestionsComponent } from './components/test-questions/test-questions.component';
+import { AttemptedTestComponent } from './components/attempted-test/attempted-test.component';
+
 
 
 @NgModule({
@@ -19,7 +21,8 @@ import { TestQuestionsComponent } from './components/test-questions/test-questio
     CreateQuestionComponent,
     UpdateQuestionComponent,
     QuestionListComponent,
-    TestQuestionsComponent
+    TestQuestionsComponent,
+    AttemptedTestComponent
   ],
   imports: [
     CommonModule,

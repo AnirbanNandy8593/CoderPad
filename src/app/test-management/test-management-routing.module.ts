@@ -7,6 +7,7 @@ import { CreateQuestionComponent } from './components/create-question/create-que
 import { UpdateQuestionComponent } from './components/update-question/update-question.component';
 import { QuestionListComponent } from './components/question-list/question-list.component';
 import { TestQuestionsComponent } from './components/test-questions/test-questions.component';
+import { AttemptedTestComponent } from './components/attempted-test/attempted-test.component';
 
 const routes: Routes = [
   // {
@@ -30,17 +31,20 @@ const routes: Routes = [
   // {
   //   path:'question-list', component:QuestionListComponent
   // },
-  {
-    path: 'update-question/:id',
-    component: UpdateQuestionComponent,
-  },
+  // {
+  //   path: 'update-question/:id',
+  //   component: UpdateQuestionComponent,
+  // },
   // {
   //   path:'',redirectTo:'question-list',pathMatch:'full'
   // }
-  { path: 'test-questions/:testId', component: TestQuestionsComponent },
-  { path: 'question-list/:testId', component: QuestionListComponent },
+  // { path: 'test-questions/:testId', component: TestQuestionsComponent },
+  // { path: 'question-list/:testId', component: QuestionListComponent },
   {
-    path:'',redirectTo:'test-list',pathMatch:'full'
+    path:'attempt-test',component:AttemptedTestComponent
+  },
+  {
+    path:'',redirectTo:'attempt-test',pathMatch:'full'
   }
 ];
 

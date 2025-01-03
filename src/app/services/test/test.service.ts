@@ -7,6 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class TestService {
   private baseUrl = 'http://localhost:3000/tests';
+  private attmptUrl = 'http://localhost:3000/attempted';
 
   constructor(private http: HttpClient) {}
 
@@ -29,5 +30,11 @@ export class TestService {
   createTest(testData: any): Observable<any> {
     return this.http.post(this.baseUrl, testData);
   }
+
+  // Attempted Test Addition
+  submitAttemptedTest(attemptedTest: any): Observable<any> {
+    return this.http.post(this.attmptUrl, attemptedTest);
+  }
+
 }
 
