@@ -8,8 +8,9 @@ import { TestService } from 'src/app/services/test/test.service';
   styleUrls: ['./attempted-test.component.scss']
 })
 export class AttemptedTestComponent {
-  testId: string = "ae33";
+  testId: string = "e274";
   testDetails: any = null;
+  testSubmitted !: boolean;
   questions: any[] = [];
   attemptedAnswers: { [key: string]: string } = {};
   timer!: number; // Timer in seconds
@@ -23,6 +24,7 @@ export class AttemptedTestComponent {
 
   ngOnInit(): void {
     // this.testId = this.route.snapshot.paramMap.get('id');
+    this.testSubmitted = false;
     this.loadTestDetails();
   }
 
@@ -74,12 +76,16 @@ export class AttemptedTestComponent {
   }
 
   submitTest(): void {
+
+    if (this.testSubmitted) return;
+    this.testSubmitted = true;
+
     const candidateId = "8765";
     const attemptedTest = {
       candidateId,
       testId: this.testId,
       questions: this.questions.map((question) => ({
-        questionId: question.id,
+        questionDescription: question.questionDescription,
         selectedAnswer: this.attemptedAnswers[question.id] || '',
         correctAnswer: question.correctAnswer, // Correct answer
       })),

@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class TestService {
   private baseUrl = 'http://localhost:3000/tests';
-  private attmptUrl = 'http://localhost:3000/attempted';
+  private attmptUrl = 'http://localhost:3000/AttemptedTest';
 
   constructor(private http: HttpClient) {}
 

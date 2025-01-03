@@ -113,28 +113,40 @@
       "correctAnswer": "select * from Employees;"
     }
   ],
-  "attempted": [
+  "AttemptedTest": [
     {
-      "id": "78be",
+      "id": "c1cd",
+      "candidateId": "8765",
+      "testId": "ae33",
+      "questions": [
+        {
+          "questionDescription": "Write a query to get all the details from table Employees?",
+          "selectedAnswer": "select * from Employees;",
+          "correctAnswer": "select * from Employees;"
+        }
+      ]
+    },
+    {
+      "id": "8fad",
       "candidateId": "8765",
       "testId": "e274",
       "questions": [
         {
-          "questionId": "ce22",
+          "questionDescription": "What is 34+35 equal to?",
           "selectedAnswer": "69",
           "correctAnswer": "69"
         }
       ]
     },
     {
-      "id": "03d9",
+      "id": "86d1",
       "candidateId": "8765",
-      "testId": "ae33",
+      "testId": "e274",
       "questions": [
         {
-          "questionId": "7a4d",
-          "selectedAnswer": "Select * from Table;",
-          "correctAnswer": "select * from Employees;"
+          "questionDescription": "What is 34+35 equal to?",
+          "selectedAnswer": "69",
+          "correctAnswer": "69"
         }
       ]
     }
