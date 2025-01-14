@@ -25,7 +25,9 @@ export class CreateQuestionComponent {
 
   saveQuestion() {
     const questionData = this.questionForm.value;
-
+    // if(questionData.quesType === 'multi-mcq') {
+    //   questionData.correctAnswer = questionData.correctAnswer.split(',').map((answer: string) => answer.trim());
+    // }
     // Save question
     this.questionService.createQuestion(questionData).subscribe({
       next: (response) => {

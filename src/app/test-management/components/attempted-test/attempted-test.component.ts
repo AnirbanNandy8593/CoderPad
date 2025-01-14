@@ -12,9 +12,10 @@ export class AttemptedTestComponent {
   testDetails: any = null;
   testSubmitted !: boolean;
   questions: any[] = [];
-  attemptedAnswers: { [key: string]: string } = {};
+  // attemptedAnswers: { [key: string]: string } = {};
   timer!: number; // Timer in seconds
   intervalId: any;
+  attemptedAnswers: { [key: string]: string[] } = {};;
 
   constructor(
     private route: ActivatedRoute,
@@ -33,7 +34,7 @@ export class AttemptedTestComponent {
       next: (test) => {
         this.testDetails = test;
         this.questions = test.questions;
-        // console.log(this.questions);
+        console.log(this.questions);
         this.timer = test.duration * 60; // Converting to Seconds
         this.startTimer();
       },
@@ -50,9 +51,36 @@ export class AttemptedTestComponent {
     return target ? target.value : '';
   }
 
-  selectAnswer(questionId: string, value: string): void {
+  selectAnswer(questionId: string, value: number): void {
     if (value) {
-      this.attemptedAnswers[questionId] = value; // Save the selected answer
+      this.attemptedAnswers[questionId] = [value.toString()]; // Save the selected answer as an array
+    }
+  }
+
+  selectAnswerSQL(questionId: string, value: string): void {
+    if (value) {
+      this.attemptedAnswers[questionId] = [value]; // Save the selected answer as an array
+    }
+  }
+  isChecked(event: Event): boolean {
+    const target = event.target as HTMLInputElement;
+    return target ? target.checked : false;
+  }
+
+  toggleMultiSelectAnswer(questionId: string, option: number, checked: boolean): void {
+    if (!this.attemptedAnswers[questionId]) {
+      this.attemptedAnswers[questionId] = [];
+    }
+
+    if (checked) {
+      // Add checked options
+      this.attemptedAnswers[questionId].push(option.toString());
+    } else {
+      // Remove unchecked options
+      const index = this.attemptedAnswers[questionId].indexOf(option.toString());
+      if (index > -1) {
+        this.attemptedAnswers[questionId].splice(index, 1);
+      }
     }
   }
 
@@ -84,11 +112,14 @@ export class AttemptedTestComponent {
     const attemptedTest = {
       candidateId,
       testId: this.testId,
-      questions: this.questions.map((question) => ({
-        questionDescription: question.questionDescription,
-        selectedAnswer: this.attemptedAnswers[question.id] || '',
-        correctAnswer: question.correctAnswer, // Correct answer
-      })),
+      questions: this.questions.map((question) => {
+        const selectedAnswers = this.attemptedAnswers[question.id] || [];
+        return {
+          questionDescription: question.questionDescription,
+          selectedAnswer: selectedAnswers.join(','),
+          correctAnswer: question.correctAnswer, // Correct answer as string
+        };
+      }),
     };
 
     this.testService.submitAttemptedTest(attemptedTest).subscribe({

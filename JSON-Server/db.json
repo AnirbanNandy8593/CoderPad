@@ -2,11 +2,11 @@
   "users": [
     {
       "id": "9440",
-      "username": "Anirban_Nandy18",
+      "username": "Anirban_Nandy60",
       "userrole": "data-admin",
       "useremail": "anirban@hotmail.com",
-      "password": "654321",
-      "cnfpassword": "654321",
+      "password": "123456",
+      "cnfpassword": "123456",
       "isActive": true
     },
     {
@@ -45,6 +45,28 @@
           "option4": "68",
           "correctAnswer": "69",
           "id": "ce22"
+        },
+        {
+          "id": "7a4d",
+          "questionDescription": "Write a query to get all the details from table Employees?",
+          "quesType": "sql",
+          "difficulty": "easy",
+          "option1": "null",
+          "option2": "null",
+          "option3": "null",
+          "option4": "null",
+          "correctAnswer": "select * from Employees;"
+        },
+        {
+          "id": "d6f4",
+          "questionDescription": "Which Of the Following Are Present in JDK?",
+          "quesType": "multi-mcq",
+          "difficulty": "easy",
+          "option1": "JRE,",
+          "option2": "JVM",
+          "option3": "RAM",
+          "option4": "JAVA",
+          "correctAnswer": "JRE,,JVM,JAVA"
         }
       ]
     },
@@ -87,6 +109,13 @@
           "id": "ce22"
         }
       ]
+    },
+    {
+      "id": "5d79",
+      "createdBy": "9440",
+      "testName": "Maths Test",
+      "testDescription": "This is Maths Test....",
+      "duration": 30
     }
   ],
   "questions": [
@@ -111,6 +140,17 @@
       "option3": "null",
       "option4": "null",
       "correctAnswer": "select * from Employees;"
+    },
+    {
+      "id": "d6f4",
+      "questionDescription": "Which Of the Following Are Present in JDK?",
+      "quesType": "multi-mcq",
+      "difficulty": "easy",
+      "option1": "JRE,",
+      "option2": "JVM",
+      "option3": "RAM",
+      "option4": "JAVA",
+      "correctAnswer": "1,2,4"
     }
   ],
   "AttemptedTest": [
@@ -147,6 +187,28 @@
           "questionDescription": "What is 34+35 equal to?",
           "selectedAnswer": "69",
           "correctAnswer": "69"
+        }
+      ]
+    },
+    {
+      "id": "23b9",
+      "candidateId": "8765",
+      "testId": "e274",
+      "questions": [
+        {
+          "questionDescription": "What is 34+35 equal to?",
+          "selectedAnswer": "1",
+          "correctAnswer": "69"
+        },
+        {
+          "questionDescription": "Write a query to get all the details from table Employees?",
+          "selectedAnswer": "Select * from Employees;",
+          "correctAnswer": "select * from Employees;"
+        },
+        {
+          "questionDescription": "Which Of the Following Are Present in JDK?",
+          "selectedAnswer": "1,2,4",
+          "correctAnswer": "JRE,,JVM,JAVA"
         }
       ]
     }

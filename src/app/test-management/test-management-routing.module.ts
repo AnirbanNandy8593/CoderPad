@@ -15,16 +15,19 @@ const routes: Routes = [
   // },
   // {
   //   path:'',redirectTo:'create-test',pathMatch:'full'
-  // }
-  {
-    path: 'update-test/:id', component: UpdateTestComponent ,
-  },
+  // },
+  // {
+  //   path: 'update-test/:id', component: UpdateTestComponent ,
+  // },
   // {
   //   path:'',redirectTo:'update-test',pathMatch:'full'
   // }
-  {
-    path:'test-list', component:TestListComponent
-  },
+  // {
+  //   path:'test-list', component:TestListComponent
+  // },
+  // {
+  //   path:'',redirectTo:'test-list',pathMatch:'full'
+  // },
   // {
   //   path:'',redirectTo:'test-list',pathMatch:'full'
   // }
@@ -46,6 +49,12 @@ const routes: Routes = [
   {
     path:'',redirectTo:'attempt-test',pathMatch:'full'
   }
+  // {
+  //   path:'create-question', component:CreateQuestionComponent
+  // },
+  // {
+  //   path:'',redirectTo:'create-question',pathMatch:'full'
+  // }
 ];
 
 @NgModule({

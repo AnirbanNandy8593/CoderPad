@@ -10,7 +10,8 @@
     <div class="form-group">
       <label for="quesType">Question Type</label>
       <select id="quesType" formControlName="quesType">
-        <option value="mcq">MCQ</option>
+        <option value="mcq">Single-Select-MCQ</option>
+        <option value="multi-mcq">Multi-Select-MCQ</option>
         <option value="sql">SQL</option>
       </select>
     </div>
@@ -24,35 +25,33 @@
       </select>
     </div>
 
-    <div class="form-group" *ngIf="questionForm.value.quesType === 'mcq'">
+    <div class="form-group" *ngIf="questionForm.value.quesType === 'mcq' || questionForm.value.quesType === 'multi-mcq'">
       <label for="option1">Option 1</label>
       <input type="text" id="option1" formControlName="option1" />
     </div>
 
-    <div class="form-group" *ngIf="questionForm.value.quesType === 'mcq'">
+    <div class="form-group" *ngIf="questionForm.value.quesType === 'mcq' || questionForm.value.quesType === 'multi-mcq'">
       <label for="option2">Option 2</label>
       <input type="text" id="option2" formControlName="option2" />
     </div>
 
-    <div class="form-group" *ngIf="questionForm.value.quesType === 'mcq'">
+    <div class="form-group" *ngIf="questionForm.value.quesType === 'mcq' || questionForm.value.quesType === 'multi-mcq'">
       <label for="option3">Option 3</label>
       <input type="text" id="option3" formControlName="option3"  />
     </div>
 
-    <div class="form-group" *ngIf="questionForm.value.quesType === 'mcq'">
+    <div class="form-group" *ngIf="questionForm.value.quesType === 'mcq' || questionForm.value.quesType === 'multi-mcq'">
       <label for="option4">Option 4</label>
       <input type="text" id="option4" formControlName="option4" />
     </div>
 
     <div class="form-group">
-      <label for="correctAnswer">Correct Answer</label>
+      <label for="correctAnswer">
+        {{ questionForm.value.quesType === 'mcq' ? 'Correct Answer' : 'Correct Answers(seperate by comma)' }}
+      </label>
       <input type="text" id="correctAnswer" formControlName="correctAnswer" />
     </div>
 
-    <!-- <div class="form-group" *ngIf="questionForm.value.quesType === 'sql'">
-      <label for="queryResult">Query Result</label>
-      <input type="text" id="queryResult" formControlName="queryResult" />
-    </div> -->
 
     <button type="submit" [disabled]="questionForm.invalid" class="save-button">
       Save Question
